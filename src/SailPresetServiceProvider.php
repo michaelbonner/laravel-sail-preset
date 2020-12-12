@@ -5,7 +5,6 @@ namespace Yoelpc4\LaravelSailPreset;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Sail\SailServiceProvider;
 
 class SailPresetServiceProvider extends ServiceProvider implements DeferrableProvider
 {
@@ -16,7 +15,7 @@ class SailPresetServiceProvider extends ServiceProvider implements DeferrablePro
      */
     public function boot()
     {
-        if ($this->app->runningInConsole() && $this->app->bound(SailServiceProvider::class)) {
+        if ($this->app->runningInConsole()) {
             Artisan::command('sail:publish-preset', function () {
                 if ($this->confirm('Do you want to replace the current runtimes & docker-compose.yml with preset?',
                     false)) {
