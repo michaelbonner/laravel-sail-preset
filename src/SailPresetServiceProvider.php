@@ -35,15 +35,15 @@ class SailPresetServiceProvider extends ServiceProvider implements DeferrablePro
                     $this->info('Successfully publishing laravel sail preset, please run "sail build --no-cache" to re-building docker image.');
                 }
             })->purpose('Publish the Laravel Sail Docker preset files.');
-        }
 
-        $this->publishes([
-            __DIR__.'/../stubs/docker-compose.yml' => base_path('docker-compose.yml'),
-            __DIR__.'/../runtimes/7.4/Dockerfile'  => base_path('docker/7.4/Dockerfile'),
-            __DIR__.'/../runtimes/7.4/php.ini'     => base_path('docker/7.4/php.ini'),
-            __DIR__.'/../runtimes/8.0/Dockerfile'  => base_path('docker/8.0/Dockerfile'),
-            __DIR__.'/../runtimes/8.0/php.ini'     => base_path('docker/8.0/php.ini'),
-        ], 'sail-preset');
+            $this->publishes([
+                __DIR__.'/../stubs/docker-compose.yml' => base_path('docker-compose.yml'),
+                __DIR__.'/../runtimes/7.4/Dockerfile'  => base_path('docker/7.4/Dockerfile'),
+                __DIR__.'/../runtimes/7.4/php.ini'     => base_path('docker/7.4/php.ini'),
+                __DIR__.'/../runtimes/8.0/Dockerfile'  => base_path('docker/8.0/Dockerfile'),
+                __DIR__.'/../runtimes/8.0/php.ini'     => base_path('docker/8.0/php.ini'),
+            ], 'sail-preset');
+        }
     }
 
     /**
