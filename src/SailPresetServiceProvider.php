@@ -17,20 +17,8 @@ class SailPresetServiceProvider extends ServiceProvider implements DeferrablePro
     {
         if ($this->app->runningInConsole()) {
             Artisan::command('sail:publish-preset', function () {
-                if ($this->confirm('Do you want to replace the current runtimes & docker-compose.yml with preset?',
-                    false)) {
-                    $this->call('vendor:publish', ['--tag' => 'sail']);
-
+                if ($this->confirm('Do you want to replace the current runtimes & docker-compose.yml with preset?', false)) {
                     $this->call('vendor:publish', ['--tag' => 'sail-preset']);
-
-                    file_put_contents(
-                        base_path('docker-compose.yml'),
-                        str_replace(
-                            './vendor/laravel/sail/runtimes/8.0',
-                            './docker/8.0',
-                            file_get_contents(base_path('docker-compose.yml'))
-                        )
-                    );
 
                     $this->info('Successfully publishing laravel sail preset, please run "sail build --no-cache" to re-building docker image.');
                 }

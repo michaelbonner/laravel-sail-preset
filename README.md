@@ -28,6 +28,12 @@ composer require yoelpc4/laravel-sail-preset --dev
 
 ## Package Publication
 
+Publish `laravel/sail` preset via command:
+
+```shell
+php artisan sail:publish
+```
+
 Publish package preset via command:
 
 ```shell
