@@ -1,6 +1,6 @@
 {
     "name": "yoelpc4/laravel-sail-preset",
-    "description": "Laravel Sail Dockerfile, php.ini, & docker-compose.yml preset.",
+    "description": "Laravel Sail runtimes & docker-compose.yml preset.",
     "keywords": [
         "laravel",
         "sail",

@@ -5,7 +5,7 @@
 [![Software License][ico-license]](LICENSE.md)
 [![Contributor Covenant][ico-code-of-conduct]](CODE_OF_CONDUCT.md)
 
-_Laravel Sail Dockerfile, php.ini, & docker-compose.yml preset._
+_Laravel Sail runtimes & docker-compose.yml preset._
 
 ## Requirement
 

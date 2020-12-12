@@ -18,7 +18,7 @@ class SailPresetServiceProvider extends ServiceProvider implements DeferrablePro
     {
         if ($this->app->runningInConsole() && $this->app->bound(SailServiceProvider::class)) {
             Artisan::command('sail:publish-preset', function () {
-                if ($this->confirm('Would you like to replace current runtimes & docker-compose.yml from the preset?',
+                if ($this->confirm('Do you want to replace the current runtimes & docker-compose.yml with preset?',
                     false)) {
                     $this->call('vendor:publish', ['--tag' => 'sail']);
 
