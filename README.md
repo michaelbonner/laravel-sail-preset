@@ -40,6 +40,8 @@ Publish package preset via command:
 php artisan sail:publish-preset
 ```
 
+It'll replaces Dockerfile, php.ini, & docker-compose.yml according to the preset.
+
 ## Dependencies
 
 - gnupg (Latest)
