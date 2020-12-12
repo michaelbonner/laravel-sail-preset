@@ -20,7 +20,7 @@
         "php": ">=7.3",
         "illuminate/contracts": "8.*",
         "illuminate/support": "8.*",
-        "laravel/sail": "^0.0.9"
+        "laravel/sail": "^0.0"
     },
     "autoload": {
         "psr-4": {
